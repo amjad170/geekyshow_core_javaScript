@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- <script src="geeky.js" type="text/javascript">
+        
+    </script> -->
+  </head>
+  <body>
+    <script>
+    //  var G = "Global variable access from out side of a function <br>";
+    //  var g = "Global variable access from inside of a function <br>";
+
+    //  document.write(G);
+
+    //  function show(){
+    //         var l = "Local variable access from inside of a function"
+    //         document.write(g)
+    //         document.write(l)
+    //  }
+
+    //  show()
+
+    // document.write(l) // Local variable can not acces from Outside of it`s function
+
+
+
+    function outerF(){
+        var u = "This value from outer function <br>";
+       // document.write(i); //inner value can not access from  outer
+
+        function innerF(){
+            var i="This value from inner function <br>";
+            document.write(u); //outer value can access from inner
+        }
+        innerF();
+    }
+
+    outerF();
+      
+      
+
+    </script>
+  </body>
+</html>
