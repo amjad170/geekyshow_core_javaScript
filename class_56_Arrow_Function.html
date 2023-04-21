@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- <script src="geeky.js" type="text/javascript">
+        
+    </script> -->
+  </head>
+  <body>
+    <script>
+      //function Declaration #############################
+       function show(){
+        document.write("Declaration  Function <br>");
+      }
+      show();
+
+      //function Expression ############################
+      var myfun = function show(){
+        document.write("Expression Function <br>");
+      }
+      myfun();
+
+      //function Anonymous ############################
+      var myfun = function (){
+        document.write("Anonymous Function <br>");
+      }
+      myfun();
+
+      //function closure ################################
+      var myfun = function (){
+        var a = "Closur Function <br>";
+
+        function show(){
+            document.write(a);
+        }
+        show()
+      }
+      myfun();
+
+      //Arrow Function without parameter ################################
+      var myfun = () => {
+        document.write(10 + "<br>");
+      }
+      myfun();
+
+    //Arrow Function with 1 parameter ################################
+      var myfun = a => {
+        document.write(a);
+      }
+      myfun(20 + "<br>");
+
+    //Arrow Function with 2 parameters ################################
+      var myfun = (a,b) => {
+        document.write((a+b) +"<br>");
+      }
+      myfun(10, 20);
+
+    //Arrow Function with Default parameter ################################
+      var myfun = (a,b=20) => {
+        document.write((a+b) + "<br>");
+      }
+      myfun(10);
+
+    //Arrow Function with  1 statement ################################
+      var myfun = () => document.write(100 + "<br>");
+
+      myfun();
+
+    //Arrow Function with  more statement should needed {} ################################
+      var myfun = () => document.write("Amjad 1" + "<br>");
+      document.write("Amjad 2" + "<br>");
+
+      myfun();
+
+    //Arrow Function with  more statement should needed {} ################################
+      var myfun = () => {document.write("Jabed 1" + "<br>");
+      document.write("Jabed 2" + "<br>");}
+
+      myfun();
+
+    //Arrow Function without return word {} should not needed ################################
+      var myfun = a => a;
+
+     document.write(myfun("Osman Mama please return <br>")) ;
+
+    //Arrow Function with return word {} should needed ################################
+      var myfun = a => {return a};
+
+     document.write(myfun("Osman Mama please return<br>")) ;
+
+    //This code will not work ################################
+     /*  var myfun = a => return a;
+
+     document.write(myfun(20)) ; */
+
+    //This code will not work  ################################
+      var myfun = a => {a};
+
+     document.write(myfun(20) + "<br>") ;
+
+
+    //  Declaration function to arrow function #######
+    function show(a,b){
+        return a+b;
+     }
+     document.write(show(10,20) + "<br>")
+     
+
+     var arr = (a,b) => a+b;
+     document.write(arr(50,50));
+
+    </script>
+  </body>
+</html>
