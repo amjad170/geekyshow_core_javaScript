@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- <script src="geeky.js" type="text/javascript">
+        
+    </script> -->
+  </head>
+  <body>
+    <script>
+       function Mobile(model_no){
+        this.model = model_no;
+        this.memory = 4;
+       }
+
+       var samsung = new Mobile("Galaxy-s6");
+       var nokia = new Mobile("Nokia-1100");
+// System 1 "typeof" operator ###################################
+       if(typeof nokia.memory !== "undefined"){
+            document.write("Available <br>");
+       }else{
+        document.write("Doesn't Exit <br>");
+       }
+
+// System 2 "in" operator ###################################
+       if("memory" in nokia){
+            document.write("Available <br>");
+       }else{
+        document.write("Doesn't Exit <br>");
+       }
+
+// System 3 "hasOwnProperty("key")" operator ###################################
+       if(nokia.hasOwnProperty("memory")){
+            document.write("Available <br>");
+       }else{
+        document.write("Doesn't Exit <br>");
+       }
+
+
+        
+        
+    </script>
+  </body>
+</html>

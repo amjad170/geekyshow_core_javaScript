@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- <script src="geeky.js" type="text/javascript">
+        
+    </script> -->
+  </head>
+  <body>
+    <script>
+       
+       Mobile.prototype = {
+        ram:250,
+        camera:3,
+       }
+
+
+       function Mobile(model_no){
+        this.model = model_no;
+        this.color = "white";
+        this.memory = 4;
+        this.price = function(){document.write(this.model + "price Tk 3000 <br>");};
+       }
+
+       var samsung = new Mobile("Galaxy-s6");
+       var nokia = new Mobile("Nokia-1100");
+
+       for(var specs in nokia){
+        if(typeof nokia[specs] !== 'function'){   //we can't call  function inside loop
+
+            document.write(specs+":  "+nokia[specs]+"<br>"); //nokia.specs not work because specs is an array
+        }
+        
+       }
+
+    
+
+       document.write(Object.keys(nokia) +"<br>");
+
+
+   
+
+        
+
+
+
+        
+        
+    </script>
+  </body>
+</html>

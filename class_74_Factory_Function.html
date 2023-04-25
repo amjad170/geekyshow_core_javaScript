@@ -13,14 +13,18 @@
   <body>
     <script>
 
-        var fees = new Object();        //new Object({Amjad:900,Jabed:700});
-         
-        fees.Rahul = 100;
-        fees['Sumit'] = 200;
-        fees['Super Man'] = 300;
-        fees.total = function(){return(100+200+300);};
+        function mobile(modelName){
+            return{
+                model:modelName,
+                price:function(){return("price Tk: "+1200);},
+            }
+        }
 
-        document.write(fees.Rahul +"<br>"+fees.Sumit +"<br>"+fees["Super Man"] +"<br>"+fees.total() +"<br>")
+        var Samsung = mobile("Galaxy");
+        var Nokia = mobile("Nokia1100");
+
+        document.write(Samsung.model+"<br>"+Samsung.price()+"<br>");
+        document.write(Nokia.model+"<br>"+Nokia.price());
         
     </script>
   </body>

@@ -13,14 +13,19 @@
   <body>
     <script>
 
-        var fees = new Object();        //new Object({Amjad:900,Jabed:700});
-         
-        fees.Rahul = 100;
-        fees['Sumit'] = 200;
-        fees['Super Man'] = 300;
-        fees.total = function(){return(100+200+300);};
+        var fees = {
+          Rahul:100,
+          Sumit:200,
+          'Super Man':300,
+          total:function(){return(100+200+300);}
+        };
 
-        document.write(fees.Rahul +"<br>"+fees.Sumit +"<br>"+fees["Super Man"] +"<br>"+fees.total() +"<br>")
+       delete fees.Rahul;
+       delete fees.total;
+
+        console.log(fees)
+
+        document.write(fees['Rahul'])//Rauhl is undefined because Rahul is deleted
         
     </script>
   </body>

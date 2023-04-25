@@ -12,15 +12,26 @@
   </head>
   <body>
     <script>
+       
 
-        var fees = new Object();        //new Object({Amjad:900,Jabed:700});
-         
-        fees.Rahul = 100;
-        fees['Sumit'] = 200;
-        fees['Super Man'] = 300;
-        fees.total = function(){return(100+200+300);};
+        function Mobile(modelName="Galaxy"){
+            
+          this.model=modelName;
 
-        document.write(fees.Rahul +"<br>"+fees.Sumit +"<br>"+fees["Super Man"] +"<br>"+fees.total() +"<br>")
+          this.price=function(){document.write(this.model + " Price Rs. 3000" +"<br>");};
+        }
+          
+
+        var samsung = new Mobile("Galaxy");
+       
+        var LG = new Mobile("LG-222");
+
+        samsung.price();
+        LG.price();
+        
+
+
+        
         
     </script>
   </body>

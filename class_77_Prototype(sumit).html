@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- <script src="geeky.js" type="text/javascript">
+        
+    </script> -->
+  </head>
+  <body>
+    <script>
+       
+//  const personMethods = {
+
+//    eat(){console.log("Person is eating");},
+//    play(){console.log("Person is playing");},
+//    sleep(){console.log("Person is sleeping");},
+//  };
+ 
+
+Person.prototype = {
+
+   eat(){console.log("Person is eating");},
+   play(Tamim){console.log(Tamim+" is playing");},
+   sleep(){console.log("Person is sleeping");},
+
+ };
+
+
+ function Person(name,age){
+
+    // let personobj =  Object.create(Person.prototype);
+
+    //  personobj.name = "Amjad";
+    //  personobj.age = 33;
+
+     //let this =  Object.create(Person.prototype);
+
+     this.name = "Amjad";
+     this.age = 33;
+ 
+    // personobj.eat = personMethods.eat;
+    // personobj.play = personMethods.play;
+    // personobj.sleep = personMethods.sleep;
+
+
+    //  console.dir(personobj);
+    //  console.dir(this);
+   
+
+    //return personobj;
+    //return this;
+ }
+
+//  const sakib = Person("sakib",33);
+//  const tamim = Person("Tamim",34);
+
+const sakib = new Person("sakib",33);
+const tamim = new Person("Tamim",34);
+
+tamim.play("Tamim");
+sakib.eat();
+
+
+
+
+//  const captain = {
+//     name:"Mashrafi",
+//     age:35,
+//     country:"Bangladesh"
+//  };
+
+//  const player = Object.create(captain);
+
+//  console.log(player.name);
+
+    
+//Convert prototype to class 
+
+class Person2{
+
+    constructor(name,age){ 
+
+        this.name = "Amjad";
+        this.age = 33;
+    }
+
+   eat(){console.log("Person is eating");}
+
+   play(Tamim){console.log(Tamim+" is playing");}
+
+   sleep(){console.log("Person is sleeping");}
+
+}
+
+console.log()
+
+const sakib2 = new Person2("sakib",33);
+const tamim2 = new Person2("Tamim",34);
+
+tamim2.play("Tamim");
+sakib2.eat();
+        
+
+
+
+        
+        
+    </script>
+  </body>
+</html>
