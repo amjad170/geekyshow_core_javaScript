@@ -20,15 +20,20 @@
         this.price = function(){document.write(this.model + "price Tk 3000 <br>");};
        }
 
+       //inside prototype value all together // and why it's not work under object
         Mobile.prototype = {
         ram:250,
         camera:3,
        }
 
+      
+       
+
        var samsung = new Mobile("Galaxy-s6");
        var nokia = new Mobile("Nokia-1100");
 
-      
+        //inside prototype value One by one
+       Mobile.prototype.display = "6.8 inch";
 
        for(var specs in nokia){
         if(typeof nokia[specs] !== 'function'){   //we can't call  function inside loop
@@ -41,6 +46,8 @@
     
 
        document.write(Object.keys(nokia) +"<br>");
+
+       
 
 
    

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- <script src="geeky.js" type="text/javascript">
+        
+    </script> -->
+  </head>
+  <body>
+    <script>
+       /*   // Inheritance long system
+        Samsung.prototype = Object.create(Mobile.prototype);
+        Samsung.prototype.constructor = Samsung; // for reset
+
+        Lenovo.prototype = Object.create(Mobile.prototype);
+        Lenovo.prototype.constructor = Lenovo; // for reset */
+
+
+        //Function for Inheritance short system and it should call line 51
+        function extend(child,parent){
+            child.prototype = Object.create(parent.prototype);
+            child.prototype.constructor = child; // for reset
+        }
+
+
+        //Super Class
+        var Mobile = function(){
+
+        }
+
+        //Prototype Method
+        Mobile.prototype.getModel = function(){
+            return this.model;
+        }
+
+        //Sub Class
+        var Samsung = function(model,price){
+            this.model = model;
+            this.price = price;
+        }
+
+        //Sub Class
+        var Lenovo = function(model){
+            this.model = model;
+        }
+
+        //Inheritance call
+        extend(Samsung,Mobile);
+        extend(Lenovo,Mobile);
+
+        Samsung.prototype.getPrice = function(){
+            return this.price;
+        }
+
+        var galaxy = new Samsung('Galaxy',300);
+        var Phab2 = new Lenovo('Phab2');
+        console.log(galaxy.getModel())
+        console.log(Phab2.getModel())
+        console.log(galaxy.getPrice())
+
+
+        // proble 2 code #########################################################
+        console.log("<hr color='red'>") // this is not needed
+
+        var Mobile = function(model){
+            this.model = model;
+        }
+
+        Mobile.prototype.getModel = function (){
+            return this.model;
+        }
+
+        var Samsung = function(model,price){
+            Mobile.call(this,model)
+            this.price = price;
+        }
+
+        //Inheritance
+        Samsung.prototype = Object.create(Mobile.prototype);
+        Samsung.prototype.constructor=Samsung;
+
+        var galaxy = new Samsung("Galaxy",300);
+        console.log(galaxy.price)
+        console.log(galaxy.getModel())
+
+    </script>
+  </body>
+</html>

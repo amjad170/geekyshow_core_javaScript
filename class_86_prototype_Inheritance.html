@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- <script src="geeky.js" type="text/javascript">
+        
+    </script> -->
+  </head>
+  <body>
+    <script>
+
+     var Mobile = function(){
+      this.a = 10;
+      }
+
+      Mobile.prototype.z = 50;
+     
+
+      var m = new Mobile()
+      
+      console.log(m)
+
+
+    
+
+      var Samsung = function(){
+        Mobile.call(this)
+        this.b = 20;
+      }
+
+
+      Samsung.prototype = Object.create(Mobile.prototype);  // for prototype inheritance
+
+     // Samsung.prototype.z = 30; // change value
+
+     
+
+      var s = new Samsung()
+      console.log(s.b)
+      console.log(s.a)
+      console.log(s.z)
+
+
+
+      console.log(m.b)
+      console.log(m.a)
+      console.log(m.z)
+
+
+
+     
+
+
+    </script>
+  </body>
+</html>
