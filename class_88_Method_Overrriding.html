@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- <script src="geeky.js" type="text/javascript">
+        
+    </script> -->
+  </head>
+  <body>
+    <script>
+
+        //Function for Inheritance short system and it should call line 39
+        function extend(child,parent){
+            child.prototype = Object.create(parent.prototype);
+            child.prototype.constructor = child; // for reset
+        }
+
+
+        //Super Class
+        var Mobile = function(){
+
+        }
+
+        //Prototype Method
+        Mobile.prototype.show = function(){
+            return "Super class Method";
+        }
+
+        //Sub Class
+        var Samsung = function(){
+         
+        }
+
+        //Sub class Samsung extending super class Mobile
+        extend(Samsung,Mobile); // if this line set after 44 line it's out put will change to "super class method"
+
+         //Prototype Method
+         Samsung.prototype.show = function(){
+            return "Sub class Method";
+        }
+
+       //creating object of sub class Samsung
+        var sam = new Samsung();
+        var mob = new Mobile();
+        
+        document.write(sam.show() + "<br>");
+        document.write(mob.show())
+       
+
+
+
+    </script>
+  </body>
+</html>
