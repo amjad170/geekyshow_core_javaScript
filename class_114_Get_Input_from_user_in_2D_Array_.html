@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- <script src="geeky.js" type="text/javascript">
+        
+    </script> -->
+  </head>
+  <body>
+    <script>
+        
+        ////Using array literal
+        var geek = [];
+        var rows = 2;  ////change here, rows will be changed
+        var cols = 3;  ////change here, columns will be changed
+
+        ////Using array constructor
+       // var geek = new Array(rows);  ////rows not needed inside
+
+       //// Create Empty Array in Main Array
+        for(let i=0; i<rows; i++){
+            geek[i] = [];         ////geek[i] = new Array(cols) or []  //cols not needed inside
+          
+        }
+       
+        //// Input from User in 2D Array
+        for(let i=0; i<rows; i++){
+            for(let j=0; j<cols; j++){
+                geek[i][j] = prompt("Enter Name");
+            }
+        }
+
+        ////Displaying Value
+        for(let i=0; i<rows; i++){
+            for(let j=0; j<cols; j++){
+                document.write(geek[i][j] + " "); ////document.write(i + "" + j + " " + geek[i][j] + " "); to get index number
+            }
+
+            document.write("<br>")
+        }
+
+   
+   
+      
+
+    </script>
+  </body>
+</html>
