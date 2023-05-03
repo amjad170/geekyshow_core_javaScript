@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- <script src="geeky.js" type="text/javascript">
+        
+    </script> -->
+  </head>
+  <body>
+    <script>
+       //There are 5 movie tickets Each Rs 200 and if you buy 5 tickets get discount Rs. 50 Each
+       //There are 5 movie tickes Each Rs 200 and if you buy less than 5 tickets get discount Rs. 0 Each
+
+       var noofticket = 5;
+       var buyticket = 5;  //set less than 5
+       var eachprice = 200;
+       var disprice = 50;
+
+       ////normal parameter pass
+      /*  function ticket(stringArray,a,b,c,d){    //stringArray=All string's array, a=noofticket, b=eachprice, c=buyticket, d=disprice
+            if(c<5){
+                d = 0;
+                return `${stringArray[0]} ${a} ${stringArray[1]} ${b} ${stringArray[2]} ${c} ${stringArray[3]}  ${d} ${stringArray[4]}`;
+            }else{
+                return `${stringArray[0]} ${a} ${stringArray[1]} ${b} ${stringArray[2]} ${c} ${stringArray[3]}  ${d} ${stringArray[4]}`;
+            }
+       } */
+
+       ////Rest prameter
+       function ticket(stringArray, ...rest){
+        //stringArray=All string's array, rest[0]=noofticket, rest[1]=eachprice, rest[2]=buyticket, rest[3]=disprice
+            if(rest[2]<5){
+                rest[3] = 0;
+                return `${stringArray[0]} ${rest[0]} ${stringArray[1]} ${rest[1]} ${stringArray[2]} ${rest[2]} ${stringArray[3]}  ${rest[3]} ${stringArray[4]}`;
+            }else{
+                return `${stringArray[0]} ${rest[0]} ${stringArray[1]} ${rest[1]} ${stringArray[2]} ${rest[2]} ${stringArray[3]}  ${rest[3]} ${stringArray[4]}`;
+            }
+       }
+
+
+       document.write(ticket`There are ${noofticket} movie tickets Each Rs ${eachprice} and if you buy ${buyticket} tickets get discount Rs. ${disprice} Each`)
+  
+    
+
+    </script>
+  </body>
+</html>
