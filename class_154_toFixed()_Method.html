@@ -12,23 +12,19 @@
   </head>
   <body>
     <script>
-        
-        ////Using array literal
-        var geek = ["Rahul","Sonam","Sakib","Mahmudulla"];
+   //toFixed() Method
+   var a = 8.7895;
 
-       geek.toString() 
-       //var z = geek.toString()
-        
-        document.write(geek + "<br>"); 
-       // document.write(typeof(z) + "<br>");
+   document.write(a.toFixed() + "<br>"); // make round and no decimal
+   document.write(a.toFixed(2) + "<br>"); //made round and two decimal
+   document.write(a.toFixed(8) + "<br>"); // null or 0 are added 
+  
 
-        
-        
-        
-      
-        
-   
-      
+   //toFixed convert Number to string
+
+   var x = a.toFixed()
+
+   document.write(typeof(x));
 
     </script>
   </body>

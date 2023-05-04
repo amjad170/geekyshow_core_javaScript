@@ -12,23 +12,19 @@
   </head>
   <body>
     <script>
-        
-        ////Using array literal
-        var geek = ["Rahul","Sonam","Sakib","Mahmudulla"];
+ 
+     var geek = "I am a good teacher"; //slice() for String,same video 118 for array
 
-       geek.toString() 
-       //var z = geek.toString()
-        
-        document.write(geek + "<br>"); 
-       // document.write(typeof(z) + "<br>");
-
-        
-        
-        
-      
-        
    
-      
+    document.write(geek.slice(1,3) + "<br>");
+    document.write(geek.slice(-3,-2) + "<br>");
+    document.write(geek.slice(1,-2) + "<br>");
+    document.write(geek.slice(undefined,-2) + "<br>");
+    document.write(geek.slice(1) + "<br>");
+    document.write(geek.slice(-3,-1) + "<br>");
+
+     
+
 
     </script>
   </body>
